@@ -1,8 +1,11 @@
 /**  style.css **/
 
 @font-face {
-  font-family: 'MyFont';
+  font-family: 'OpenSans';
   src: url('assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf')
+    format('truetype');
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto/Roboto-Regular.ttf')
     format('truetype');
 }
 
@@ -65,7 +68,11 @@ header p {
 .container-title {
   font-size: 68px;
 }
-
+.container-title span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  color: #0a4f90;
+}
 .container-subtitle {
   font-size: 32px;
 }
@@ -111,6 +118,7 @@ footer {
     padding: 0 8%;
   }
 
+
   .container {
     flex-direction: column;
     /* width: 100%; */
@@ -129,10 +137,17 @@ footer {
   .container-title {
     font-size: 23px;
   }
+  .container-title p {
+    text-align: center;
+  }
   .container-subtitle {
-    font-size: 13px;
+    font-size: 18px;
+  }
+  .container-subtitle {
+    text-align: center;
   }
 
+  
   footer {
     flex-direction: column;
     padding: 0 2%;
@@ -174,7 +189,12 @@ footer {
   
   .container-title {
     font-size: 23px;
+    text-align: center;
   }
+  .container-subtitle {
+    text-align: center;
+  }
+  
   footer {
     flex-direction: column;
     padding: 0 4%;
@@ -218,6 +238,10 @@ footer {
 
   .container-title {
     font-size: 53px;
+    text-align: center;
+  }
+  .container-subtitle {
+    text-align: center;
   }
 
   .container-right {
@@ -225,7 +249,7 @@ footer {
     height: 60vh;
   }
 
-
+  
   footer {
     padding: 0 10%;
     height: min-content;
