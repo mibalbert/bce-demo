@@ -18,22 +18,56 @@ header {
   justify-content: space-between;
   height: 7vh;
   width: 100%;
-  background-color: aqua;
+  /* background-color: aqua; */
   padding: 0 20%;
 }
 
 header p {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
+  font-size: 24px;
 }
-
-
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* flex-direction: column; */
+  /* width: 80%; */
+  /* border: 4px solid rebeccapurple; */
+  padding: 6.6% 0;
+  gap: 25px;
+  
+}
+
+.container-left {
+  width: 40%;
+  /* border: 4px solid red; */
+  display: flex;
   flex-direction: column;
+  gap: 25px;
+  /* height: 50vh; */
+  min-height: min-content;
+}
+.container-right {
+  width: 40%;
+  /* border: 4px solid green; */
+  background-image: url('./assets/images/hero-image.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 7% 40%;
+ 
+  height: 60vh;
+  border-radius: 20px;
+
+}
+
+.container-title {
+  font-size: 68px;
+}
+
+.container-subtitle {
+  font-size: 32px;
 }
 
 footer {
@@ -42,7 +76,7 @@ footer {
   justify-content: space-between;
   height: 7vh;
   width: 100%;
-  background-color: aqua;
+  /* background-color: aqua; */
   padding: 0 20%;
 }
 
@@ -54,65 +88,174 @@ footer {
 .contact-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  
 }
 
+.contact-info {
+  display: flex;
+  margin-left: 20px;
+  gap: 5px;
+  flex-direction: column;
+}
 
+.contact-email,
+.contact-phone {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
 
-
-@media screen and (max-width: 320px){
+@media screen and (max-width: 320px) {
   header {
     padding: 0 8%;
   }
+
   .container {
     flex-direction: column;
+    /* width: 100%; */
+    /* padding: 0; */
+    margin: 0;
   }
+
+  .container-left {
+    width: 100%;
+  }
+  .container-right {
+    /* display: none; */
+    width: 100%;
+  }
+
   .container-title {
     font-size: 23px;
   }
+  .container-subtitle {
+    font-size: 13px;
+  }
+
   footer {
     flex-direction: column;
     padding: 0 2%;
+    height: min-content;
   }
   .footer-container-section {
     flex-direction: column;
-    
   }
+
+  /* .contact-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+  .contact-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-email > svg,.contact-phone >svg {
+    display: none;
+  } */
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 720px) {
   header {
     padding: 0 10%;
   }
   .container {
     flex-direction: column;
   }
+
+  .container-left {
+    width: 90%;
+  }
+  .container-right {
+    width: 90%;
+  }
+  
   .container-title {
     font-size: 23px;
   }
   footer {
     flex-direction: column;
     padding: 0 4%;
+    height: min-content;
   }
   .footer-container-section {
     flex-direction: column;
-    
   }
-  
+  .contact-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-email svg {
+    height: 15px;
+    width: 15px;
+  }
+  .contact-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-phone svg {
+    height: 15px;
+    width: 15px;
+  }
 }
 
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1020px) {
   header {
-    padding: 0 13%;
+    padding: 0 10%;
   }
   .container {
     flex-direction: column;
+    /* width: 80%; */
   }
+
+  .container-left {
+    width: 80%;
+  }
+
   .container-title {
-    font-size: 23px;
+    font-size: 53px;
   }
+
+  .container-right {
+    width: 80%;
+    height: 60vh;
+  }
+
+
   footer {
-    padding: 0 13%;
+    padding: 0 10%;
+    height: min-content;
+    height: 8vh;
   }
-  
+
+  .footer-container-section {
+    gap: 15px;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+  }
+  .contact-email,
+  .contact-phone {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+  }
+  .contact-email svg,
+  .contact-phone svg {
+    height: 15px;
+    width: 15px;
+  }
 }
+/* @media screen only and (min-width: 1080px) {
+  header {
+    padding: 0 5%;
+  }
+} */
